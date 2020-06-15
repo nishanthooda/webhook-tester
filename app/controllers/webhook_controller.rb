@@ -18,7 +18,8 @@ class WebhookController < ApplicationController
         puts pr_author_handle
         puts pr_title
         puts repo_owner_email
-        EmailMergedJob.perform_later(pr_url, pr_author_handle, pr_title, repo_owner_email)
+        MergedMailer.with(url: url, author_handle: author_handle, title: title, owner_email: owner_email).merged_email.deliver_later
+        # EmailMergedJob.perform_later(pr_url, pr_author_handle, pr_title, repo_owner_email)
         render(status: 200, json: "gotcha")
     end
 
