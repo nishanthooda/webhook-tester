@@ -49,7 +49,7 @@ class WebhookController < ApplicationController
         ap payload.to_unsafe_h
 
         newline
-        puts Rainbow("-----------------done outputting------------------").cyan
+        puts Rainbow("----------------done outputting-----------------").cyan
         newline
     end
 
