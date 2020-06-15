@@ -24,9 +24,6 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'awesome_print'
 gem 'rainbow'
-gem 'sidekiq'
-gem 'sinatra', require: false
-gem 'redis-namespace'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
