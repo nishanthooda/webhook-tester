@@ -13,6 +13,7 @@ class WebhookController < ApplicationController
         pr_author_handle = payload['pull_request']['user']['login']
         pr_title = payload['pull_request']['title']
         repo_owner_email = payload['repository']['owner']['email']
+        puts payload['repository']['owner']
         puts pr_url
         puts pr_author_handle
         puts pr_title
