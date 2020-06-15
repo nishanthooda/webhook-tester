@@ -13,7 +13,10 @@ class WebhookController < ApplicationController
         pr_author_handle = payload['pull_request']['user']['login']
         pr_title = payload['pull_request']['title']
         repo_owner_email = payload['repository']['owner']['email']
-
+        puts pr_url
+        puts pr_author_handle
+        puts pr_title
+        puts repo_owner_email
         EmailMergedJob.perform_later(pr_url, pr_author_handle, pr_title, repo_owner_email)
         render(status: 200, json: "gotcha")
     end
