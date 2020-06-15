@@ -4,6 +4,7 @@ class MergedMailer < ApplicationMailer
         @repo_owner_email = params[:owner_email]
         @url = params[:url]
         @handle = params[:author_handle]
-        mail(to: repo_owner_email, subject: 'A PR was merged into your repo')
+        puts "repo_ownder_email is #{@repo_owner_email}"
+        mail(to: @repo_owner_email, subject: 'A PR was merged into your repo')
     end
 end
