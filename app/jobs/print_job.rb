@@ -4,6 +4,6 @@ class PrintJob < ApplicationJob
   def perform(*args)
     puts "Started job: #{args[0]}"
     sleep 2
-    puts "Finished job"
+    puts "Finished job!"
   end
 end
